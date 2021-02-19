@@ -33,8 +33,8 @@ for name, email in zip(names, emails):
 	message = message_template.substitute(PERSON_NAME=name.title(), NIVEL=_NIVEL, temp_dewpt=_temp_dewpt, humedad=_humedad)
 	print(message)
 	#The mail addresses and password
-	sender_address = 'pableras84@hotmail.com'
-	sender_pass = 'Ra2013bL'
+	sender_address = '@hotmail.com'
+	sender_pass = ''
 	receiver_address = email
 	#Setup the MIME
 	msg = MIMEMultipart()
