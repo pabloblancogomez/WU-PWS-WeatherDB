@@ -64,7 +64,7 @@ def _byteify(data, ignore_dicts = False):
 print( "Connecting to mysql database")
 
 #connect to the database. Enter your host, username and password
-cnx = mysql.connector.connect(user='root', password='papelote', host='localhost', database='weatherdb')
+cnx = mysql.connector.connect(user='root', password='', host='localhost', database='weatherdb')
 
 cursor = cnx.cursor()
 
@@ -117,7 +117,7 @@ def main():
                     if WEATHER_DOWNLOAD:
                         # From http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol
                         print("Downloading data from Weather Underground")
-                        url = requests.get('https://api.weather.com/v2/pws/observations/current?stationId=IBENAV1&format=json&units=m&apiKey=898d00e499d042e28d00e499d0d2e25b&numericPrecision=decimal')
+                        url = requests.get('https://api.weather.com/v2/pws/observations/current?stationId=IBENAV1&format=json&units=m&apiKey=&numericPrecision=decimal')
                         print("Inserting data to mysql database")                        
                         #try:
                         json_data = json.loads(url.text)
@@ -154,8 +154,8 @@ def main():
                                     message = message_template.substitute(PERSON_NAME=name.title(), NIVEL=NIVELnuevo, temp=atemp, humedad=ahumedad, presion=apresion, Dhumedad=Delta_humedad)
                                     #print(message)
                                     #The mail addresses and password
-                                    sender_address = 'pableras84@hotmail.com'
-                                    sender_pass = 'Ra2013bL'
+                                    sender_address = '@hotmail.com'
+                                    sender_pass = ''
                                     receiver_address = email
                                     #Setup the MIME
                                     msg = MIMEMultipart()
@@ -184,8 +184,8 @@ def main():
                                     message = message_template.substitute(PERSON_NAME=name.title(), NIVEL=NIVELnuevo, temp=atemp, humedad=ahumedad, presion=apresion, Dhumedad=Delta_humedad)
                                     #print(message)
                                     #The mail addresses and password
-                                    sender_address = 'pableras84@hotmail.com'
-                                    sender_pass = 'Ra2013bL'
+                                    sender_address = '@hotmail.com'
+                                    sender_pass = ''
                                     receiver_address = email
                                     #Setup the MIME
                                     msg = MIMEMultipart()
@@ -214,8 +214,8 @@ def main():
                                     message = message_template.substitute(PERSON_NAME=name.title(), NIVEL=NIVELnuevo, temp=atemp, humedad=ahumedad, presion=apresion, Dhumedad=Delta_humedad)
                                     #print(message)
                                     #The mail addresses and password
-                                    sender_address = 'pableras84@hotmail.com'
-                                    sender_pass = 'Ra2013bL'
+                                    sender_address = '@hotmail.com'
+                                    sender_pass = ''
                                     receiver_address = email
                                     #Setup the MIME
                                     msg = MIMEMultipart()
@@ -244,8 +244,8 @@ def main():
                                     message = message_template.substitute(PERSON_NAME=name.title(), NIVEL=NIVELnuevo, temp=atemp, humedad=ahumedad, presion=apresion, Dhumedad=Delta_humedad)
                                     #print(message)
                                     #The mail addresses and password
-                                    sender_address = 'pableras84@hotmail.com'
-                                    sender_pass = 'Ra2013bL'
+                                    sender_address = '@hotmail.com'
+                                    sender_pass = ''
                                     receiver_address = email
                                     #Setup the MIME
                                     msg = MIMEMultipart()
@@ -274,8 +274,8 @@ def main():
                                     message = message_template.substitute(PERSON_NAME=name.title(), NIVEL=NIVELnuevo, temp=atemp, humedad=ahumedad, presion=apresion, Dhumedad=Delta_humedad)
                                     #print(message)
                                     #The mail addresses and password
-                                    sender_address = 'pableras84@hotmail.com'
-                                    sender_pass = 'Ra2013bL'
+                                    sender_address = '@hotmail.com'
+                                    sender_pass = ''
                                     receiver_address = email
                                     #Setup the MIME
                                     msg = MIMEMultipart()
