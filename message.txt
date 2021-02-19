@@ -1,0 +1,12 @@
+Hola ${PERSON_NAME}, 
+
+En base a las lecturas de tu estación meteorológica de referencia consideramos que la alerta de precipitación es ${NIVEL}, puesto que se han obtenido los siguientes valores de:
+
+	- Temperatura = ${temp} gradosC.
+	- Humedad = ${humedad} %.
+	- Presión = ${presion} hPa.
+	- Incremento de Humedad = ${Dhumedad} %.
+
+Saludos,
+
+Pablo
