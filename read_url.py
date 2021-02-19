@@ -8,7 +8,7 @@ import mysql.connector
 print( "Connecting to mysql database")
 
 #connect to the database. Enter your host, username and password
-cnx = mysql.connector.connect(user='root',password='papelote', database='weatherdb')
+cnx = mysql.connector.connect(user='root',password='', database='weatherdb')
 
 cursor = cnx.cursor()
 insert_weather_data = ("INSERT INTO `weatherdb`.`weather_data`"
@@ -22,7 +22,7 @@ insert_weather_data = ("INSERT INTO `weatherdb`.`weather_data`"
 
 
 print( "Getting My PWS weather information")
-#url=requests.get('https://api.weather.com/v2/pws/observations/current?stationId=IBENAV1&format=json&units=m&apiKey=898d00e499d042e28d00e499d0d2e25b&numericPrecision=decimal')
+#url=requests.get('https://api.weather.com/v2/pws/observations/current?stationId=IBENAV1&format=json&units=m&apiKey=&numericPrecision=decimal')
 
 print( "Inserting data to mysql database")
 weather=json.loads(url.text)
@@ -114,7 +114,7 @@ print( "Done")
 #    print "Error: the database is being rolled back"
 #    db.rollback()
 
-# url = 'https://api.weather.com/v2/pws/observations/current?stationId=IBENAV1&format=json&units=m&apiKey=898d00e499d042e28d00e499d0d2e25b'
+# url = 'https://api.weather.com/v2/pws/observations/current?stationId=IBENAV1&format=json&units=m&apiKey='
 # resp = requests.get(url=url)
 # data = resp.json()
 # print (data)
